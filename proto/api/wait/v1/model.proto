@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package api.wait.v1;
+
+option go_package = "github.com/minauteur/go_meetup_api/go/api/wait/v1;waitpb";
+
+message WaitRequest {
+  int64 wait_time = 1;
+}
+
+message WaitResponse {
+    string message = 1;
+}

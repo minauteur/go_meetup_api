@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package api.wait.v1;
+
+import "api/wait/v1/model.proto";
+
+option go_package = "github.com/minauteur/go_meetup_api/go/api/wait/v1;waitpb";
+
+service WaitAPI {
+    rpc Wait(WaitRequest) returns (WaitResponse) {}
+}
