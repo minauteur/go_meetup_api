@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package api.greeting.v1;
+
+option go_package = "github.com/minauteur/go_meetup_api/go/api/greeting/v1;greetingpb";
+
+message GreetingMessage {
+
+    string name = 1;
+
+    string message = 2;
+
+    enum EntityType {
+        ENTITY_TYPE_HUMAN = 0;
+        ENTITY_TYPE_EXTRA_TERRESTRIAL = 1;
+    }
+
+    EntityType entity_type = 3;
+
+  }
+
+  message GreetingResponse {
+    string message = 1;
+  }
