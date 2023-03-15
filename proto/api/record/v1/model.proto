@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api.record.v1;
+
+option go_package = "github.com/minauteur/go_meetup_api/go/api/record/v1;recpb";
+
+message GetRecordRequest {
+  string id = 1;
+}
+
+message GetRecordResponse {
+    string id = 1;
+    message Record {
+      string public = 2;
+      string private = 3;
+    }
+    Record record = 4;
+}

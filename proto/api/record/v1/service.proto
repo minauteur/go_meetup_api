@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package api.record.v1;
+
+import "api/record/v1/model.proto";
+
+option go_package = "github.com/minauteur/go_meetup_api/go/api/record/v1;recpb";
+
+service RecordAPI {
+    rpc Get(GetRecordRequest) returns (GetRecordResponse) {}
+}
